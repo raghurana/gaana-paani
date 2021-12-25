@@ -1,0 +1,12 @@
+{
+  "name": "gaana-paani-root",
+  "private": true,
+  "version": "1.0.0",
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  },
+  "scripts": {
+    "start": "lerna run start --stream",
+    "start-admin-console": "lerna run start --stream --scope=gaana-paani-admin-console-app"
+  }
+}
