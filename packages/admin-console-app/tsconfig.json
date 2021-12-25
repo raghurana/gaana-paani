@@ -13,10 +13,11 @@
     "noFallthroughCasesInSwitch": true /* Report errors for fallthrough cases in switch statement. */,
     "skipLibCheck": true,
     "esModuleInterop": true,
+    "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
-    "importHelpers": false, /* Requires tslib npm module to be imported is set to true. https://www.typescriptlang.org/tsconfig#importHelpers*/
+    "importHelpers": false /* Requires tslib npm module to be imported is set to true. https://www.typescriptlang.org/tsconfig#importHelpers*/
   },
   "exclude": ["node_modules", "tests"]
 }

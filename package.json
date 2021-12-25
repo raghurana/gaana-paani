@@ -7,6 +7,7 @@
   },
   "scripts": {
     "start": "lerna run start --stream",
-    "start-admin-console": "lerna run start --stream --scope=gaana-paani-admin-console-app"
+    "start-admin-console": "lerna run start --stream --scope=gaana-paani-admin-console-app",
+    "serve-web-app": "lerna run serve --stream --scope=gaana-paani-ng-webapp"
   }
 }

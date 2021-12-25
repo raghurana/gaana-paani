@@ -1,5 +1,5 @@
-# Documentation 
-docs 
+# Documentation
+docs
 
 # Logs
 logs
@@ -127,3 +127,6 @@ tests/performance/dashboard
 tests/performance/modified_*
 
 .idea
+
+# Secrets
+**private**

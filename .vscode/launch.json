@@ -1,0 +1,23 @@
+{
+  "configurations": [
+    {
+      "name": "Debug-admin-console",
+      "type": "pwa-node",
+      "request": "launch",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/packages/admin-console-app",
+      "runtimeArgs": ["run-script", "start"],
+      "runtimeExecutable": "npm",
+      "skipFiles": ["<node_internals>/**", "node_modules/**"]
+    },
+    {
+      "name": "Debug-angular-webapp",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:4200",
+      "webRoot": "${workspaceFolder}/packages/webapp-angular",
+      "cwd": "${workspaceFolder}/packages/webapp-angular",
+      "preLaunchTask": "npm: serve-web-app"
+    }
+  ]
+}

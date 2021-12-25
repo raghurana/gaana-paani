@@ -1,0 +1,15 @@
+{
+    "firebase": {
+        "dbUrl": "https://gaana-paani.australia-southeast1.firebaseio.com",
+        "serviceAccountPrivateKeyRelativePath": "./assets/secrets/gaana-paani-fb-adminsdk-private.json"
+    },
+    "songData": {
+        "basePath": "./assets/song-data",
+        "systems": [
+            {
+                "systemName": "magicsing-et25k-v100",
+                "hindiCsvFile": "hindi.csv"
+            }
+        ]
+    }
+}
