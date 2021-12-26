@@ -1,0 +1,54 @@
+<h1>Gaana Paani</h1>
+
+<button (click)="onLoginClick()">Login</button>
+
+<ul>
+  <li *ngFor="let song of songs$">
+    {{ song.id }} - {{ song.title }} - {{ song.path }}
+  </li>
+</ul>
+
+
+====
+
+import { Component } from '@angular/core';
+import { Auth, signInWithEmailAndPassword } from '@angular/fire/auth';
+import * as NgFire from '@angular/fire/firestore';
+
+interface Song {
+  id: string;
+  title: string;
+  movie: string;
+  singer: string;
+  language: string;
+  path: string;
+}
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
+})
+export class AppComponent {
+  constructor(private auth: Auth, private fireStore: NgFire.Firestore) {}
+
+  songs$!: Song[];
+
+  async onLoginClick() {
+    // const creds = await signInWithEmailAndPassword(
+    //   this.auth,
+    //   '<my-username>',
+    //   '<my-password>'
+    // );
+
+    const golmaalQuery = NgFire.query(
+      NgFire.collection(this.fireStore, 'system/blah/songs'),
+      NgFire.limit(10)
+    );
+
+    const queryResult = await NgFire.getDocs(golmaalQuery);
+    this.songs$ = queryResult.docs.map((snap) => {
+      return <Song>{ ...snap.data(), path: snap.ref.path };
+    });
+  }
+}

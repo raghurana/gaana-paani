@@ -1,6 +1,7 @@
 ## Pre-reqs
 
 - Request project owner to provide firebase admin sdk private key to be placed under the assets/secrets folder of admin-console-app
+- Request project owner to provide firebase sdk config json to be placed under the assets/secrets folder of webapp-angular
 
 ## How to run
 
@@ -17,6 +18,18 @@ The value of scope is defined in package.json name property for the application 
 Another example for adding dev dependencies
 
 `lerna add @types/<npm-package> --dev --scope=gaana-paani-admin-console-app`
+
+## To add/remove firebase capabilities
+
+Make sure you have firebase cli installed and run `firebase init`
+
+## To deploy
+
+`firebase login`
+
+after successful login, from the packages/webapp-angular directory
+
+`npm run deploy`
 
 ## Notes
 

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "gaana-paani": {
+      "hosting": {
+        "webapp-angular": [
+          "gaana-paani"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "gaana-paani"
+  }
+}

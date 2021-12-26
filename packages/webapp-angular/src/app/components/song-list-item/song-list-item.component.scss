@@ -1,0 +1,24 @@
+mat-card {
+  margin: 3px;
+  display: flex;
+  padding: 10px !important;
+}
+
+button {
+  background: transparent;
+  border: none;
+  margin-left: 10px;
+}
+
+#content {
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.title {
+  font-weight: bold;
+}
+
+div {
+  text-transform: capitalize;
+}

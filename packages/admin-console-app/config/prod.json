@@ -8,7 +8,12 @@
         "systems": [
             {
                 "systemName": "magicsing-et25k-v100",
-                "hindiCsvFile": "hindi.csv"
+                "csvFiles": [
+                    {
+                        "fileName": "hindi.csv",
+                        "language": "hindi"
+                    }
+                ]
             }
         ]
     }

@@ -17,19 +17,21 @@ export default class Program {
 
     switch (choice) {
       case 1:
-        await Program.uploadAllSongsFromLocalCsv(config, fireClient);
+        await Program.uploadAllCsvSongs(config, fireClient);
         break;
       default:
         console.error(`Unknown option ${choice}`);
     }
   }
 
-  static async uploadAllSongsFromLocalCsv(config: AppConfig, fireClient: FirebaseClient) {
+  static async uploadAllCsvSongs(config: AppConfig, fireClient: FirebaseClient) {
     for (const system of config.songData.systems) {
-      const hindiCsv = path.resolve(path.join(config.songData.basePath, system.systemName, system.hindiCsvFile));
-      const hindiSongs = await SongsCsvParser.parseSongs(hindiCsv, "hindi");
-      const saveCount = await fireClient.saveSongs(system.systemName, hindiSongs);
-      console.log(`${saveCount} songs were saved successfully`);
+      for (const csvFile of system.csvFiles) {
+        const csvFullPath = path.resolve(path.join(config.songData.basePath, system.systemName, csvFile.fileName));
+        const songs = await SongsCsvParser.parseSongs(csvFullPath, csvFile.language);
+        const saveCount = await fireClient.saveSongs(system.systemName, songs);
+        console.log(`${saveCount} songs were saved successfully.`);
+      }
     }
   }
 }

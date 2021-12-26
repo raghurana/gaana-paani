@@ -1,0 +1,11 @@
+<div class="tabContent"><router-outlet></router-outlet></div>
+<mat-tab-group
+  animationDuration="0ms"
+  mat-align-tabs="center"
+  color="accent"
+  backgroundColor="primary"
+  (selectedTabChange)="onSelectedTabChanged($event.index)"
+>
+  <mat-tab label="Search Songs"></mat-tab>
+  <mat-tab label="My Favourites"></mat-tab>
+</mat-tab-group>

@@ -8,7 +8,12 @@ export interface AppConfig {
     systems: [
       {
         systemName: string;
-        hindiCsvFile: string;
+        csvFiles: [
+          {
+            fileName: string;
+            language: Language;
+          }
+        ];
       }
     ];
   };

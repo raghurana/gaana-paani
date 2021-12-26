@@ -89,6 +89,10 @@
     "**/*debug.log": true,
     "packages/admin-console-app/**/docs": true,
     "packages/admin-console-app/**private**": true,
-    "packages/admin-console-app/**secret**": true
+    "packages/admin-console-app/**secret**": true,
+    "packages/webapp-angular/**/.firebase": true,
+    "packages/webapp-angular/**/*-debug.log": true,
+    "packages/webapp-angular/**/.runtimeconfig.json": true,
+    "packages/webapp-angular/**/firebase-prod-private.json": true
   }
 }

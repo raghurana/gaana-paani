@@ -1,0 +1,23 @@
+<mat-card>
+  <mat-card-title>Login to your account</mat-card-title>
+
+  <mat-form-field>
+    <mat-label>Email</mat-label>
+    <input matInput type="email" placeholder="user@email.com" #email />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Password</mat-label>
+    <input matInput type="password" #pass />
+  </mat-form-field>
+
+  <mat-card-actions>
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="onLoginClick(email.value, pass.value)"
+    >
+      Login
+    </button>
+  </mat-card-actions>
+</mat-card>

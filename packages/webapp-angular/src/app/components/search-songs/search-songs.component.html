@@ -1,0 +1,8 @@
+<mat-form-field>
+  <mat-label>Search Songs</mat-label>
+  <input matInput #searchBox (keyup)="searchTerms$.next(searchBox.value)" />
+</mat-form-field>
+
+<ng-container *ngFor="let song of allSongs">
+  <app-song-list-item [song]="song"></app-song-list-item>
+</ng-container>

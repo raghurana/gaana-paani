@@ -1,0 +1,10 @@
+<mat-card>
+  <div id="content" (click)="onContentClick()">
+    <div class="title">{{ song.title | lowercase }}</div>
+    <div><b>movie:</b> {{ song.movie | lowercase }}</div>
+    <div><b>singer:</b> {{ song.singer | lowercase }}</div>
+  </div>
+  <button (click)="onFavButtonClick()">
+    <mat-icon>favorite_border</mat-icon>
+  </button>
+</mat-card>
