@@ -1,8 +1,13 @@
-<mat-form-field>
-  <mat-label>Search Songs</mat-label>
-  <input matInput #searchBox (keyup)="searchTerms$.next(searchBox.value)" />
-</mat-form-field>
+<mat-progress-bar mode="indeterminate" *ngIf="isLoading"></mat-progress-bar>
 
-<ng-container *ngFor="let song of allSongs">
-  <app-song-list-item [song]="song"></app-song-list-item>
+<ng-container *ngIf="!isLoading">
+  <mat-form-field>
+    <mat-label>Search Songs</mat-label>
+    <input matInput #searchBox (keyup)="searchTerms$.next(searchBox.value)" />
+  </mat-form-field>
+  <div class="scrollContent">
+    <ng-container *ngFor="let song of filteredSongs">
+      <app-song-list-item [song]="song"></app-song-list-item>
+    </ng-container>
+  </div>
 </ng-container>

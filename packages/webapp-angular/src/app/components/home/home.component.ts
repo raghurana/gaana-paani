@@ -8,12 +8,12 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  readonly routes = ['./search', './detail'];
+  readonly routes = ['./search', './favs'];
 
   constructor(private router: Router) {}
 
   ngOnInit(): void {
-    this.router.navigate(['./search']);
+    this.onSelectedTabChanged(0);
   }
 
   onSelectedTabChanged(selectedIndex: number) {

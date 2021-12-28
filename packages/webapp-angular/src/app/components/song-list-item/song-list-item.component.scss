@@ -19,6 +19,15 @@ button {
   font-weight: bold;
 }
 
+.favs {
+  display: flex;
+  width: 100%;
+}
+
+.space {
+  flex: 1 1 auto;
+}
+
 div {
   text-transform: capitalize;
 }

@@ -4,4 +4,7 @@ export interface Song {
   movie: string;
   singer: string;
   language: string;
+  path: string;
+  isUserFav: boolean;
+  favedBy?: string[];
 }

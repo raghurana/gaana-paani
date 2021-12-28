@@ -2,6 +2,14 @@
   <mat-toolbar-row>
     <mat-icon>music_note</mat-icon>
     <span>Gaana Paani</span>
+    <span class="space"></span>
+    <button
+      mat-stroked-button
+      *ngIf="auth.currentUser"
+      (click)="onLogoutClick()"
+    >
+      Log Out
+    </button>
   </mat-toolbar-row>
 </mat-toolbar>
 <div class="appContent">

@@ -1,10 +1,15 @@
 :host {
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 mat-form-field {
   background: transparent;
   margin: 0 5px 0 5px;
   height: 45px;
+}
+
+.scrollContent {
+  overflow-y: scroll;
 }

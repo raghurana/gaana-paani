@@ -1,10 +1,24 @@
 <mat-card>
-  <div id="content" (click)="onContentClick()">
-    <div class="title">{{ song.title | lowercase }}</div>
-    <div><b>movie:</b> {{ song.movie | lowercase }}</div>
-    <div><b>singer:</b> {{ song.singer | lowercase }}</div>
-  </div>
-  <button (click)="onFavButtonClick()">
-    <mat-icon>favorite_border</mat-icon>
-  </button>
+  <ng-container *ngIf="mode === 'search'">
+    <div id="content" (click)="onContentClick()">
+      <div class="title">
+        <b>{{ song.id }}.</b> {{ song.title | lowercase }}
+      </div>
+      <div><b>movie:</b> {{ song.movie | lowercase }}</div>
+      <div><b>singer:</b> {{ song.singer | lowercase }}</div>
+    </div>
+    <button (click)="onFavButtonClick()">
+      <mat-icon color="accent">
+        {{ song.isUserFav ? "favorite" : "favorite_border" }}
+      </mat-icon>
+    </button>
+  </ng-container>
+
+  <ng-container *ngIf="mode === 'favs'">
+    <div class="favs title">
+      {{ song.title | lowercase }}
+      <span class="space"></span>
+      {{ song.id }}
+    </div>
+  </ng-container>
 </mat-card>
