@@ -1,10 +1,14 @@
-## Pre-reqs
+# A Firebase song directory for MagicSing karaoke system
+
+
+|Home Screen| Favorites Screen|
+|------------|-----------------|
+|<img width="432" alt="Capture1" src="https://github.com/user-attachments/assets/3ea88d22-6379-4bcc-979c-b2e5cb154db7" /> | <img width="432" alt="Capture2" src="https://github.com/user-attachments/assets/39c43b83-7143-4ff7-8819-f8b9486eda41" /> |
+
+## How to run with Pre-Reqs
 
 - Request project owner to provide firebase admin sdk private key to be placed under the assets/secrets folder of admin-console-app
 - Request project owner to provide firebase sdk config json to be placed under the assets/secrets folder of webapp-angular
-
-## How to run
-
 - All Apps at once `npm start` from the workspace root. Apps will be hot reloaded for changes
 - Admin consle app only `npm run start-admin-console`
 
